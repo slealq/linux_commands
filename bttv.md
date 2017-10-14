@@ -13,6 +13,6 @@ Now to listen to this channel, then run the following command:
 
 When using the Geovision 850 cards, the standard was set to PAL instead of NTSC
 
-    v4l2-ctl
-    v4l2-ctl --get-standard
-    v4l2-ctl --set-standard=ntsc
+    v4l2-ctl -d 0
+    v4l2-ctl -d 0 --get-standard
+    v4l2-ctl -d 0 --set-standard=ntsc
