@@ -1,0 +1,4 @@
+# Streaming one of the signals to RTSP locally
+    cvlc -vvv v4l2:///dev/video0 --sout '#transcode{vcodec=mp4v, acodec=none, vb=2000, ab=0}:rtp{sdp=rtsp://:8554/}'
+
+Where the `/dev/video0` is the input you want to transmit and `:8554/` is the port to transmit to.
