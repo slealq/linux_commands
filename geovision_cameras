@@ -1,0 +1,8 @@
+v4l2-ctl -d 0 --set-standard=ntsc
+v4l2-ctl -d 1 --set-standard=ntsc
+v4l2-ctl -d 2 --set-standard=ntsc
+v4l2-ctl -d 3 --set-standard=ntsc
+cvlc -d -vvv v4l2:///dev/video0 --sout '#transcode{vcodec=mp4v, acodec=none, vb=2000, ab=0}:rtp{sdp=rtsp://:8554/}'
+cvlc -d -vvv v4l2:///dev/video1 --sout '#transcode{vcodec=mp4v, acodec=none, vb=2000, ab=0}:rtp{sdp=rtsp://:8555/}'
+cvlc -d -vvv v4l2:///dev/video2 --sout '#transcode{vcodec=mp4v, acodec=none, vb=2000, ab=0}:rtp{sdp=rtsp://:8556/}'
+cvlc -d -vvv v4l2:///dev/video3 --sout '#transcode{vcodec=mp4v, acodec=none, vb=2000, ab=0}:rtp{sdp=rtsp://:8557/}'
