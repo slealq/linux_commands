@@ -6,6 +6,7 @@ Where the `/dev/video0` is the input you want to transmit and `:8554/` is the po
 # Changing settings of standards and capture
 
 When using the Geovision 850 cards, the standard was set to PAL instead of NTSC
+
     v4l2-ctl
     v4l2-ctl --get-standard
     v4l2-ctl --set-standard=ntsc
