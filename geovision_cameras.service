@@ -2,7 +2,9 @@
 Description=Script
 
 [Service]
-ExecStart=/usr/bin/geovision_cameras.service
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/geovision_cameras
 
 [Install]
 WantedBy=multi-user.target
